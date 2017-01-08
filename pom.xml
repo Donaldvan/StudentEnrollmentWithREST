@@ -92,12 +92,12 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>2.4.2</version>
-					<configuration>
+					<!--configuration>
 						<tagBase>https://github.com/Donaldvan/StudentEnrollmentWithREST/tags</tagBase>
 						<mavenExecutorId>forked-path</mavenExecutorId>
 						<useReleaseProfile>false</useReleaseProfile>
 						<arguments>-Psonatype-oss-release</arguments>
-					</configuration>
+					</configuration-->
 				</plugin>
 			</plugins>
 		</pluginManagement>
