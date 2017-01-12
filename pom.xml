@@ -144,7 +144,7 @@
 		</profile>
 	</profiles-->
 
-	<distributionManagement>
+	<!--distributionManagement>
 		<repository>
 			<id>sonatype-nexus-staging</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
@@ -153,10 +153,10 @@
 			<id>sonatype-nexus-snapshots</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement-->
 
 	
-	<!--distributionManagement>
+	<distributionManagement>
 		<repository>
 		    <id>releases</id>
             <name>Nexus Releases</name>
@@ -167,10 +167,10 @@
             <name>Nexus Snapshot</name>
             <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
-	</distributionManagement-->
+	</distributionManagement>
 
 <!-- download artifacts from this repo -->
-<repositories>
+<!--repositories>
  <repository>
   <id>nexus</id>
   <name>nexus PUBLIC</name>
@@ -183,7 +183,7 @@
    <enabled>true</enabled>
   </snapshots>
  </repository>
-</repositories>
+</repositories-->
 
 <!-- download plugins from this repo -->
 <pluginRepositories>
