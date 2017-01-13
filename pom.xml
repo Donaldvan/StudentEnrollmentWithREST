@@ -5,15 +5,8 @@
 	<groupId>com.github.ganesh</groupId>
 	<artifactId>StudentEnrollmentWithREST</artifactId>
 	<packaging>war</packaging>
-	<version>1.2</version>
+	<version>1.4</version>
 	<name>StudentEnrollmentWithREST</name>
-	<!--parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>7</version>
-	</parent-->
-
-	
 	
 	<build>
 		<finalName>StudentEnrollmentWithREST</finalName>
@@ -70,19 +63,16 @@
 				<version>1.4.1</version>
 				<executions>
 					<execution>
-						<!--  >id>enforce-maven</id-->
-						<id>enforce-version</id>
-						
+						<id>enforce-maven</id>
 						<goals>
 							<goal>enforce</goal>
 						</goals>
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<!--version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,), (3.3.9, )</version-->
-									<version>3.2.1</version>
-									<!--message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures
-										and checksums respectively.</message-->
+									<version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
+									<message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures
+										and checksums respectively.</message>
 								</requireMavenVersion>
 							</rules>
 						</configuration>
@@ -102,60 +92,9 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-<reporting>
-        <plugins>
-            <!--  integrate maven-cobertura-plugin to project site  -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.6</version>
-            
-				<configuration>
-				
-                    <formats>
-                        <format>html</format>
-                    </formats>
-                    <check/>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
-	
-	<!--profiles>
-		<profile>
-			<id>sign</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles-->
-
-	<!--distributionManagement>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement-->
 
 	
+
 	<distributionManagement>
 		<repository>
 		    <id>releases</id>
@@ -168,37 +107,6 @@
             <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
-
-<!-- download artifacts from this repo -->
-<!--repositories>
- <repository>
-  <id>nexus</id>
-  <name>nexus PUBLIC</name>
-  <url>http://localhost:8081/nexus/content/groups/public/</url>
-  <releases>
-   <enabled>true</enabled>
-  </releases>
-
-  <snapshots>
-   <enabled>true</enabled>
-  </snapshots>
- </repository>
-</repositories-->
-
-<!-- download plugins from this repo -->
-<pluginRepositories>
- <pluginRepository>
-  <id>nexus</id>
-  <name>nexus</name>
-  <url>http://localhost:8081/nexus/content/groups/public/</url>
-  <releases>
-   <enabled>true</enabled>
-  </releases>
-  <snapshots>
-   <enabled>true</enabled>
-  </snapshots>
- </pluginRepository>
-</pluginRepositories>
 
 	<dependencies>
 		<dependency>
