@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <link href="assets/css/bootstrap-united.css" rel="stylesheet" />
@@ -54,8 +52,8 @@ body {
 			</div>
 
 			<a class="btn btn-primary" href="webapi/studentResource/signup">Signup
-				Â» </a> <a class="btn btn-primary" href="webapi/studentResource/login">Login
-				Â» </a>
+				» </a> <a class="btn btn-primary" href="webapi/studentResource/login">Login
+				» </a>
 		</div>
 
 		<div></div>
